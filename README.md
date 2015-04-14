@@ -6,7 +6,7 @@ Przykłady
 Dodanie posta o typie "błąd":
 
 ```shell
-curl http://your-prefix.sugester.dev/app/posts.json \
+curl http://your-prefix.sugester.pl/app/posts.json \
      -H 'Accept: application/json' \
      -H 'Content-Type: application/json' \
      -u login:password \
@@ -22,7 +22,7 @@ curl http://your-prefix.sugester.dev/app/posts.json \
 ```
 
 
-Wszystkie pola obiektu "post:
+Wszystkie pola obiektu "post":
 
 ```shell
 {
