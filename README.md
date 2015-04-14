@@ -40,7 +40,7 @@ curl http://your-prefix.sugester.pl/app/posts.json \
 
 
 <a name="post"/>
-Wszystkie pola obiektu "post":
+##Specyfikacja pól obiektu Post (Sugestia/Zgłoszenie/E-mail)
 
 ```shell
 {
