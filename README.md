@@ -15,7 +15,7 @@ Dzięki API można z innych systemów dodawać posty/sugestie/błędy itp
 <a name="token"/>
 ##API token
 
-Kod autoryzacyjny API (`API_TOKEN`) należy pobrać z ustawień aplikacji w menu: Ustawienia > API > Kod autoryzacyjny API
+Kod autoryzacyjny API (`API_TOKEN`) należy pobrać z ustawień aplikacji w menu: Ustawienia > API > Kod autoryzacyjny API. Dzięku niemu w wywołaniach API nie trzeba będzie podawać swojego loginu/hasła.
 
 <a name="examples"/>
 ##Przykłady wywołania
