@@ -1,6 +1,26 @@
 # API
 API Sugestera
 
+Przykłady
+
+Dodanie posta o typie "błąd":
+
+```shell
+curl http://your-prefix.sugester.dev/app/posts.json \
+     -H 'Accept: application/json' \
+     -H 'Content-Type: application/json' \
+     -u login:password \
+     -d '
+{
+"api_token": "API_TOKEN", 
+"post": {
+    "title":"post title2", 
+    "content": "post content 2",
+    "kind": "error"
+  }
+}'
+```
+
 
 Wszystkie pola obiektu "post:
 
