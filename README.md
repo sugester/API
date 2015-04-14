@@ -26,7 +26,6 @@ Dodanie posta o typie "błąd":
 curl http://your-prefix.sugester.pl/app/posts.json \
      -H 'Accept: application/json' \
      -H 'Content-Type: application/json' \
-     -u login:password \
      -d '
 {
 "api_token": "API_TOKEN", 
