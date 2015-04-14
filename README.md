@@ -1,7 +1,24 @@
-# API
-API Sugestera
+# Sugester API
 
-Przykłady
+Opis jak zintegrować własną aplikację lub serwis z systemem <http://sugester.pl/>
+
+
+Dzięki API można z innych systemów dodawać posty/sugestie/błędy itp
+
+## Spis treści
++ [API Token](#token)  
++ [Faktury - przykłady wywołania](#examples)  
+	+ Dodanie nowej sugestii
++ [Post - specyfikacja](#post)
+
+
+<a name="token"/>
+##API token
+
+`API_TOKEN` token trzeba pobrać z ustawień aplikacji ("Ustawienia > API > Kod autoryzacyjny API")
+
+<a name="examples"/>
+##Przykłady wywołania
 
 Dodanie posta o typie "błąd":
 
@@ -22,6 +39,7 @@ curl http://your-prefix.sugester.pl/app/posts.json \
 ```
 
 
+<a name="post"/>
 Wszystkie pola obiektu "post":
 
 ```shell
