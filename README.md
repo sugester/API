@@ -7,7 +7,7 @@ Dzięki API można z innych systemów dodawać posty/sugestie/błędy itp
 
 ## Spis treści
 + [API Token](#token)  
-+ [Faktury - przykłady wywołania](#examples)  
++ [Dodanie postu - przykłady wywołania](#examples)  
 	+ Dodanie nowej sugestii
 + [Post - specyfikacja](#post)
 
