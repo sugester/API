@@ -174,7 +174,6 @@ curl http://YOUR-PREFIX.sugester.pl/app/account.json \
 	"shortcut": skrót nazwy klienta
 	"note": notatka
 	"last_name": nazwisko
-	"deleted": czy skasowany
 	"discount": zniżka
 	"payment_to_kind": domyślny cza płatności faktury
 	"use_delivery_address": adres korespondencyjny aktywny
