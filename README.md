@@ -48,13 +48,13 @@ curl http://sugester.sugester.dev/app/clients.json\
 <a name="client_show"/>
 Pobranie danych klienta:
 ```shell
-curl http://sugester.sugester.dev/app/clients/7575347.json?api_token=YOUR_API_TOKEN
+curl http://sugester.sugester.dev/app/clients/1234.json?api_token=YOUR_API_TOKEN
 ```
 
 <a name="client_update"/>
 Aktualizacja danych klienta:
 ```shell
-curl http://sugester.sugester.dev/app/clients/7575347.json\
+curl http://sugester.sugester.dev/app/clients/1234.json\
      -X PUT \
      -H 'Accept: application/json' \
      -H 'Content-Type: application/json' \
@@ -87,7 +87,7 @@ curl http://sugester.sugester.dev/app/posts.json \
     "content": "task content 1",
     "task_kind": "task",
     "client_id": null,
-    "responsible_id": 340507
+    "responsible_id": 1234
   }
 }'
 ```
