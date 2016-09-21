@@ -31,7 +31,7 @@ Kod autoryzacyjny API (`API_TOKEN`) należy pobrać z ustawień aplikacji w menu
 <a name="client_create"/>
 Dodanie nowego klienta:
 ```shell
-curl http://sugester.sugester.dev/app/clients.json\
+curl http://YOUR-PREFIX.sugester.pl/app/clients.json\
      -H 'Accept: application/json' \
      -H 'Content-Type: application/json' \
      -d '
@@ -48,13 +48,13 @@ curl http://sugester.sugester.dev/app/clients.json\
 <a name="client_show"/>
 Pobranie danych klienta:
 ```shell
-curl http://sugester.sugester.dev/app/clients/1234.json?api_token=YOUR_API_TOKEN
+curl http://YOUR-PREFIX.sugester.pl/app/clients/1234.json?api_token=YOUR_API_TOKEN
 ```
 
 <a name="client_update"/>
 Aktualizacja danych klienta:
 ```shell
-curl http://sugester.sugester.dev/app/clients/1234.json\
+curl http://YOUR-PREFIX.sugester.pl/app/clients/1234.json\
      -X PUT \
      -H 'Accept: application/json' \
      -H 'Content-Type: application/json' \
@@ -70,13 +70,13 @@ curl http://sugester.sugester.dev/app/clients/1234.json\
 <a name="client_destroy"/>
 Usunięcie klienta:
 ```shell
-curl -X DELETE  http://sugester.sugester.dev/app/clients/12345.json?api_token=YOUR_API_TOKEN
+curl -X DELETE  http://YOUR-PREFIX.sugester.pl/app/clients/12345.json?api_token=YOUR_API_TOKEN
 ```
 
 <a name="post_task_create"/>
 Dodanie nowego zadania:
 ```shell
-curl http://sugester.sugester.dev/app/posts.json \
+curl http://YOUR-PREFIX.sugester.pl/app/posts.json \
      -H 'Accept: application/json' \
      -H 'Content-Type: application/json' \
      -d '
@@ -95,7 +95,7 @@ curl http://sugester.sugester.dev/app/posts.json \
 <a name="deal_create"/>
 Dodanie nowego dealu:
 ```shell
-curl http://sugester.sugester.dev/app/deals.json\
+curl http://YOUR-PREFIX.sugester.pl/app/deals.json\
      -H 'Accept: application/json' \
      -H 'Content-Type: application/json' \
      -d '
@@ -129,7 +129,7 @@ curl http://your-prefix.sugester.pl/app/posts.json \
 <a name="account_create"/>
 Dodanie nowego konta:
 ```shell
-curl http://sugester.sugester.dev/app/account.json \
+curl http://YOUR-PREFIX.sugester.pl/app/account.json \
      -H 'Accept: application/json' \
      -H 'Content-Type: application/json' \
      -d '
