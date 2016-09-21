@@ -148,6 +148,75 @@ curl http://sugester.sugester.dev/app/account.json \
 }'
 ```
 
+<a name="client"/>
+##Specyfikacja pól Klienta 
+```shell
+{
+	"id": id klienta
+	"name": nazwa klienta
+	"tax_no": numer nip
+	"post_code": kod pocztowy
+	"city": miejscowosc
+	"street": ulica
+	"first_name": imię
+	"country": kraj
+	"email": e-mail
+	"phone": telefon
+	"www": strona www
+	"fax": fax
+	"created_at": utworzenie 
+	"updated_at": aktualizcja
+	"street_no": ulica
+	"kind": rodza ('buyer/seller')
+	"bank": nazwa banku
+	"bank_account": konto bankowe
+	"bank_account_id": 
+	"shortcut": skrót nazwy klienta
+	"note": notatka
+	"last_name": nazwisko
+	"deleted": czy skasowany
+	"discount": zniżka
+	"payment_to_kind": domyślny cza płatności faktury
+	"use_delivery_address": adres korespondencyjny aktywny
+	"delivery_address":  adres korespondencyjny
+	"mobile_phone": telefon komórkowy
+	"company": czy firma
+	"register_number": numer regon
+	"description": opis
+	"project_id": id projektu
+	"contact_id": id kontaktu głównego
+	"appendixes_count": ilość załączników
+	"posts_count": ilość emaili/zadań
+	"contacts_count": ilość kontaktów
+	"last_activity": ostatnia aktywność
+	"string1..10": pola dodatkowe
+	"integer1..10": pola dodatkowe
+	"decimal1..10": pola dodatkowe
+	"checkbox1..10": pola dodatkowe
+	"date1..10": pola dodatkowe
+	"text1..10": pola dodatkowe
+	"datetime1..10": pola dodatkowe
+	"avatar_file_name": avatar
+	"avatar_content_type"
+	"avatar_file_size"
+	"avatar_updated_at"
+	"status_id": id statusu
+	"category_id": id kategorii
+	"department_id": id departamentu
+	"position": pozycja
+	"creator_id": id osoby ktora dodala
+	"updater_id": id osoby ktora ostatnio aktualizowala
+	"responsible_id": id osoby odpowiedzialnej
+	"province": wojewodztwo
+	"sensitive_data": czy dane ukryte
+	"external_id": ID klienta
+	"token": token klienta
+	"paid_from": od kiedy płatny
+	"paid_to": do kiedy płatny
+	"paid_total": suma płatności od klienta
+}
+```
+
 <a name="post"/>
 ##Specyfikacja pól obiektu Post (Zadania/Sugestia/Zgłoszenie/E-mail)
 
