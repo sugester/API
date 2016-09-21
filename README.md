@@ -7,12 +7,16 @@ Dzięki API można z innych systemów dodawać posty/sugestie/błędy itp
 
 ## Spis treści
 + [API Token](#token)  
-+ [Przykłady wywołania](#examples)  
++ Przykłady wywołania
 	+ [Dodanie klienta] (#client_create)
 	+ [Pobranie danych klienta] (#client_show)
 	+ [Aktualizacja danych klienta] (#client_update)
 	+ [Skasowanie klienta] (#client_destroy)
-	+ Dodanie nowej sugestii
+	+ [Dodanie zadania] (#post_task_create)
+	+ [Dodanie dealu] (#deal_create)
+	+ [Dodanie nowej sugestii] (#post_error_create)
+	+ [Dodanie konta partnerskiego] (#account_create)
++ [Klient - specyfikacja](#client)
 + [Post - specyfikacja](#post)
 
 
@@ -69,6 +73,7 @@ Usunięcie klienta:
 curl -X DELETE  http://sugester.sugester.dev/app/clients/12345.json?api_token=YOUR_API_TOKEN
 ```
 
+<a name="post_task_create"/>
 Dodanie nowego zadania:
 ```shell
 curl http://sugester.sugester.dev/app/posts.json \
@@ -87,6 +92,7 @@ curl http://sugester.sugester.dev/app/posts.json \
 }'
 ```
 
+<a name="deal_create"/>
 Dodanie nowego dealu:
 ```shell
 curl http://sugester.sugester.dev/app/deals.json\
@@ -103,6 +109,24 @@ curl http://sugester.sugester.dev/app/deals.json\
 }'
 ```
 
+<a name="post_error_create"/>
+Dodanie posta o typie "błąd":
+```shell
+curl http://your-prefix.sugester.pl/app/posts.json \
+     -H 'Accept: application/json' \
+     -H 'Content-Type: application/json' \
+     -d '
+{
+"api_token": "API_TOKEN", 
+"post": {
+    "title":"post title2", 
+    "content": "post content 2",
+    "kind": "error"
+  }
+}'
+```
+
+<a name="account_create"/>
 Dodanie nowego konta:
 ```shell
 curl http://sugester.sugester.dev/app/account.json \
@@ -123,24 +147,6 @@ curl http://sugester.sugester.dev/app/account.json \
  }
 }'
 ```
-
-Dodanie posta o typie "błąd":
-
-```shell
-curl http://your-prefix.sugester.pl/app/posts.json \
-     -H 'Accept: application/json' \
-     -H 'Content-Type: application/json' \
-     -d '
-{
-"api_token": "API_TOKEN", 
-"post": {
-    "title":"post title2", 
-    "content": "post content 2",
-    "kind": "error"
-  }
-}'
-```
-
 
 <a name="post"/>
 ##Specyfikacja pól obiektu Post (Zadania/Sugestia/Zgłoszenie/E-mail)
