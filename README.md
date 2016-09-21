@@ -8,7 +8,10 @@ Dzięki API można z innych systemów dodawać posty/sugestie/błędy itp
 ## Spis treści
 + [API Token](#token)  
 + [Przykłady wywołania](#examples)  
-	+ [Dodanie klienta] (#cilent_create)
+	+ [Dodanie klienta] (#client_create)
+	+ [Pobranie danych klienta] (#client_show)
+	+ [Aktualizacja danych klienta] (#client_update)
+	+ [Skasowanie klienta] (#client_destroy)
 	+ Dodanie nowej sugestii
 + [Post - specyfikacja](#post)
 
@@ -21,7 +24,7 @@ Kod autoryzacyjny API (`API_TOKEN`) należy pobrać z ustawień aplikacji w menu
 <a name="examples"/>
 ##Przykłady wywołania
 
-<a name="cilent_create"/>
+<a name="client_create"/>
 Dodanie nowego klienta:
 ```shell
 curl http://sugester.sugester.dev/app/clients.json\
@@ -38,11 +41,13 @@ curl http://sugester.sugester.dev/app/clients.json\
 }'
 ```
 
+<a name="client_show"/>
 Pobranie danych klienta:
 ```shell
 curl http://sugester.sugester.dev/app/clients/7575347.json?api_token=YOUR_API_TOKEN
 ```
 
+<a name="client_update"/>
 Aktualizacja danych klienta:
 ```shell
 curl http://sugester.sugester.dev/app/clients/7575347.json\
@@ -58,6 +63,7 @@ curl http://sugester.sugester.dev/app/clients/7575347.json\
 }'
 ```
 
+<a name="client_destroy"/>
 Usunięcie klienta:
 ```shell
 curl -X DELETE  http://sugester.sugester.dev/app/clients/12345.json?api_token=YOUR_API_TOKEN
