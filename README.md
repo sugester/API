@@ -20,6 +20,102 @@ Kod autoryzacyjny API (`API_TOKEN`) należy pobrać z ustawień aplikacji w menu
 <a name="examples"/>
 ##Przykłady wywołania
 
+Dodanie nowego klienta:
+```shell
+curl http://sugester.sugester.dev/app/clients.json\
+     -H 'Accept: application/json' \
+     -H 'Content-Type: application/json' \
+     -d '
+{
+"api_token": "YOUR_API_TOKEN", 
+"client": {
+    "name":"client 1 from API",
+    "email": "client1@emailexample1.net",
+    "note": "note 1"    
+  }
+}'
+```
+
+Pobranie danych klienta:
+```shell
+curl http://sugester.sugester.dev/app/clients/7575347.json?api_token=YOUR_API_TOKEN
+```
+
+Aktualizacja danych klienta:
+```shell
+curl http://sugester.sugester.dev/app/clients/7575347.json\
+     -X PUT \
+     -H 'Accept: application/json' \
+     -H 'Content-Type: application/json' \
+     -d '
+{
+"api_token": "YOUR_API_TOKEN", 
+"client": {
+    "note": "note from API"    
+  }
+}'
+```
+
+Usunięcie klienta:
+```shell
+curl -X DELETE  http://sugester.sugester.dev/app/clients/12345.json?api_token=YOUR_API_TOKEN
+```
+
+Dodanie nowego zadania:
+```shell
+curl http://sugester.sugester.dev/app/posts.json \
+     -H 'Accept: application/json' \
+     -H 'Content-Type: application/json' \
+     -d '
+{
+"api_token": "YOUR_API_TOKEN", 
+"post": {
+    "title":"task title 1 from API",
+    "content": "task content 1",
+    "task_kind": "task",
+    "client_id": null,
+    "responsible_id": 340507
+  }
+}'
+```
+
+Dodanie nowego dealu:
+```shell
+curl http://sugester.sugester.dev/app/deals.json\
+     -H 'Accept: application/json' \
+     -H 'Content-Type: application/json' \
+     -d '
+{
+"api_token": "YOUR_API_TOKEN", 
+"deal": {
+    "name":"deal 1 from API",
+    "description": "desc 1",
+    "client_id": null
+  }
+}'
+```
+
+Dodanie nowego konta:
+```shell
+curl http://sugester.sugester.dev/app/account.json \
+     -H 'Accept: application/json' \
+     -H 'Content-Type: application/json' \
+     -d '
+{
+"api_token": "YOUR_API_TOKEN", 
+"account": {
+    "prefix":"sugester2",
+    "initial_module": "crm",
+    "from_partner": "partner1"
+ },
+"user": {
+    "login": "login1",
+    "email": "email1@sugester-email.pl",
+    "password": "password1"
+ }
+}'
+```
+
 Dodanie posta o typie "błąd":
 
 ```shell
@@ -39,7 +135,7 @@ curl http://your-prefix.sugester.pl/app/posts.json \
 
 
 <a name="post"/>
-##Specyfikacja pól obiektu Post (Sugestia/Zgłoszenie/E-mail)
+##Specyfikacja pól obiektu Post (Zadania/Sugestia/Zgłoszenie/E-mail)
 
 ```shell
 {
