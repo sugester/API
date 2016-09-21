@@ -7,7 +7,8 @@ Dzięki API można z innych systemów dodawać posty/sugestie/błędy itp
 
 ## Spis treści
 + [API Token](#token)  
-+ [Dodanie postu - przykłady wywołania](#examples)  
++ [Przykłady wywołania](#examples)  
+	+ [Dodanie klienta] (#cilent_create)
 	+ Dodanie nowej sugestii
 + [Post - specyfikacja](#post)
 
@@ -20,6 +21,7 @@ Kod autoryzacyjny API (`API_TOKEN`) należy pobrać z ustawień aplikacji w menu
 <a name="examples"/>
 ##Przykłady wywołania
 
+<a name="cilent_create"/>
 Dodanie nowego klienta:
 ```shell
 curl http://sugester.sugester.dev/app/clients.json\
