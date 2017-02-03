@@ -2,8 +2,9 @@
 
 Opis jak zintegrować własną aplikację lub serwis z systemem <http://sugester.pl/>
 
-
 Dzięki API można z innych systemów dodawać posty/sugestie/błędy itp
+
+Po zalogowaniu się do Sugester w menu Ustawienie > API znajdują się przykłady działające na danym koncie. Są one też dostępne na stronie http://api.sugester.pl/app/account/api 
 
 ## Spis treści
 + [API Token](#token)  
