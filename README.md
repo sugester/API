@@ -72,6 +72,7 @@ curl http://YOUR-PREFIX.sugester.pl/app/clients/1234.json\
 
 <a name="client_destroy"/>
 Usunięcie klienta:
+
 ```shell
 curl -X DELETE  http://YOUR-PREFIX.sugester.pl/app/clients/12345.json?api_token=YOUR_API_TOKEN
 ```
