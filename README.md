@@ -79,6 +79,7 @@ curl -X DELETE  http://YOUR-PREFIX.sugester.pl/app/clients/12345.json?api_token=
 
 <a name="post_task_create"/>
 Dodanie nowego zadania:
+
 ```shell
 curl http://YOUR-PREFIX.sugester.pl/app/posts.json \
      -H 'Accept: application/json' \
@@ -98,6 +99,7 @@ curl http://YOUR-PREFIX.sugester.pl/app/posts.json \
 
 <a name="deal_create"/>
 Dodanie nowego dealu:
+
 ```shell
 curl http://YOUR-PREFIX.sugester.pl/app/deals.json\
      -H 'Accept: application/json' \
@@ -115,6 +117,7 @@ curl http://YOUR-PREFIX.sugester.pl/app/deals.json\
 
 <a name="post_error_create"/>
 Dodanie posta o typie "błąd":
+
 ```shell
 curl http://your-prefix.sugester.pl/app/posts.json \
      -H 'Accept: application/json' \
@@ -132,6 +135,7 @@ curl http://your-prefix.sugester.pl/app/posts.json \
 
 <a name="account_create"/>
 Dodanie nowego konta:
+
 ```shell
 curl http://YOUR-PREFIX.sugester.pl/app/account.json \
      -H 'Accept: application/json' \
@@ -154,6 +158,7 @@ curl http://YOUR-PREFIX.sugester.pl/app/account.json \
 
 <a name="client"/>
 ##Specyfikacja pól Klienta 
+
 ```shell
 {
 	"id": id klienta
