@@ -31,6 +31,7 @@ Kod autoryzacyjny API (`API_TOKEN`) należy pobrać z ustawień aplikacji w menu
 
 <a name="client_create"/>
 Dodanie nowego klienta:
+
 ```shell
 curl http://YOUR-PREFIX.sugester.pl/app/clients.json\
      -H 'Accept: application/json' \
@@ -54,6 +55,7 @@ curl http://YOUR-PREFIX.sugester.pl/app/clients/1234.json?api_token=YOUR_API_TOK
 
 <a name="client_update"/>
 Aktualizacja danych klienta:
+
 ```shell
 curl http://YOUR-PREFIX.sugester.pl/app/clients/1234.json\
      -X PUT \
