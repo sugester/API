@@ -14,6 +14,7 @@ Po zalogowaniu się do Sugester w menu Ustawienie > API znajdują się przykład
 	+ [Aktualizacja danych klienta] (#client_update)
 	+ [Skasowanie klienta] (#client_destroy)
 	+ [Dodanie zadania] (#post_task_create)
+	+ [Pobranie listy zadań] (#task_index)
 	+ [Dodanie dealu] (#deal_create)
 	+ [Dodanie nowej sugestii] (#post_error_create)
 	+ [Dodanie konta partnerskiego] (#account_create)
@@ -95,6 +96,13 @@ curl http://YOUR-PREFIX.sugester.pl/app/posts.json \
     "responsible_id": 1234
   }
 }'
+```
+
+<a name="task_index"/>
+Pobranie listy zadań:
+
+```shell
+curl http://YOUR-PREFIX.sugester.pl/app/tasks.json?api_token=YOUR_API_TOKEN
 ```
 
 <a name="deal_create"/>
