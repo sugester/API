@@ -175,7 +175,6 @@ curl http://YOUR-PREFIX.sugester.pl/app/account.json \
 	"fax": fax
 	"created_at": utworzenie 
 	"updated_at": aktualizcja
-	"street_no": ulica
 	"kind": rodza ('buyer/seller')
 	"bank": nazwa banku
 	"bank_account": konto bankowe
