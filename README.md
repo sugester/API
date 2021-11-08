@@ -14,6 +14,7 @@ Po zalogowaniu się do Sugester w menu Ustawienie > API znajdują się przykład
 	+ [Aktualizacja danych klienta] (#client_update)
 	+ [Skasowanie klienta] (#client_destroy)
 	+ [Dodanie zadania] (#post_task_create)
+	+ [Dodanie komentarza do zadania] (#post_task_comment)
 	+ [Dodanie dealu] (#deal_create)
 	+ [Dodanie nowej sugestii] (#post_error_create)
 	+ [Dodanie konta partnerskiego] (#account_create)
@@ -98,7 +99,7 @@ curl http://YOUR-PREFIX.sugester.pl/app/posts.json \
 ```
 
 <a name="post_task_comment"/>
-Dodanie odpowiedzi do zadania o id post_id:
+Dodanie komentarza do zadania o id post_id:
 
 ```shell
 curl http://YOUR-PREFIX.sugester.pl/app/posts.json \
