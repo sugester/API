@@ -97,6 +97,27 @@ curl http://YOUR-PREFIX.sugester.pl/app/posts.json \
 }'
 ```
 
+<a name="post_task_comment"/>
+Dodanie odpowiedzi do zadania o id post_id:
+
+```shell
+curl http://YOUR-PREFIX.sugester.pl/app/posts.json \
+     -H 'Accept: application/json' \
+     -H 'Content-Type: application/json' \
+     -d '
+{
+"api_token": "YOUR_API_TOKEN", 
+"post": {
+    "post_id": 123,
+    "title":"comment for task 123",
+    "content": "comment content 1",
+    "task_kind": "comment",
+    "client_id": null,
+    "responsible_id": 1234
+  }
+}'
+```
+
 <a name="deal_create"/>
 Dodanie nowego dealu:
 
