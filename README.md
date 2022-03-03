@@ -15,6 +15,9 @@ Po zalogowaniu się do Sugester w menu Ustawienie > API znajdują się przykład
 	+ [Skasowanie klienta](#client_destroy)
 	+ [Dodanie zadania](#post_task_create)
 	+ [Dodanie dealu](#deal_create)
+	+ [Aktualizacja dealu](#deal_update)
+	+ [Pobieranie danych dealu](#deal_show)
+	+ [Usunięcie dealu](#deal_destroy)
 	+ [Dodanie nowej sugestii](#post_error_create)
 	+ [Dodanie konta partnerskiego](#account_create)
 + [Klient - specyfikacja](#client)
@@ -120,6 +123,40 @@ curl http://YOUR-PREFIX.sugester.pl/app/deals.json\
     "client_id": null
   }
 }'
+```
+
+<a name="deal_update"/>
+
+### Aktualizacja dealu: 
+
+```shell
+curl http://YOUR_PREFIX.sugester.pl/app/deals/1234.json\
+    -X PUT \
+    -H 'Accept: application/json' \
+    -H 'Content-Type: application/json' \
+    -d '
+{
+"api_token": "YOUR_API_TOKEN",
+"deal": {
+   "description": "new description from API"   
+ }
+}'
+```
+
+<a name="deal_show"/>
+
+### Pobieranie danych dealu:
+
+```shell
+curl http://YOUR-PREFIX.sugester.pl/app/deals/1234.json?api_token=YOUR_API_TOKEN
+```
+
+<a name="deal_destroy"/>
+
+### Usunięcie dealu:
+
+```shell
+curl -X DELETE  http://YOUR-PREFIX.sugester.pl/app/deals/12345.json?api_token=YOUR_API_TOKEN
 ```
 
 <a name="post_error_create"/>
