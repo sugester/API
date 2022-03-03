@@ -8,7 +8,7 @@ Po zalogowaniu się do Sugester w menu Ustawienie > API znajdują się przykład
 
 ## Spis treści
 + [API Token](#token)  
-+ Przykłady wywołania
++ [Przykłady wywołania](#examples)
 	+ [Dodanie klienta](#client_create)
 	+ [Pobieranie danych wszystkich klientów](#client_index)
 	+ [Pobieranie danych klienta](#client_show)
@@ -32,6 +32,7 @@ Po zalogowaniu się do Sugester w menu Ustawienie > API znajdują się przykład
 
 
 <a name="token"/>
+
 ## API token
 
 Kod autoryzacyjny API (`API_TOKEN`) należy pobrać z ustawień aplikacji w menu: Ustawienia > API > Kod autoryzacyjny API. Dzięku niemu w wywołaniach API nie trzeba będzie podawać swojego loginu/hasła.
