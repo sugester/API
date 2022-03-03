@@ -25,6 +25,9 @@ Po zalogowaniu się do Sugester w menu Ustawienie > API znajdują się przykład
 	+ [Dodanie kontaktu](#contact_create)
 	+ [Pobieranie danych kontaktu](#contact_show)
 	+ [Aktualizacja danych kontaktu](#contact_update)
+	+ [Dodanie nowej listy odbiorców](#contact_lists_create)
+	+ [Pobranie danych listy odbiorców](#contact_lists_index)
+	+ [Aktualizacja danych listy odbiorców](#contact_lists_update)
 	+ [Dodanie nowej sugestii](#post_error_create)
 	+ [Dodanie konta partnerskiego](#account_create)
 	+ [Integracje](#integrations)
@@ -250,6 +253,50 @@ curl http://YOUR_PREFIX.sugester.pl/app/contacts/1234.json\
  }
 }'
 
+```
+
+<a name="contact_lists_create"/>
+
+### Dodanie listy odbiorców:
+
+```shell
+curl https://YOUR_PREFIX.sugester.pl/app/contact_lists.json \
+     -H 'Accept: application/json' \
+     -H 'Content-Type: application/json' \
+     -d '
+{
+"api_token": "YOUR_API_KEY",
+"contact_list": {
+    "name": "New contact list"
+  }
+}'
+
+```
+
+<a name="contact_lists_show"/>
+
+### Pobieranie danych listy odbiorców:
+
+```shell
+curl https://jarorafo.sugester.pl/app/contact_lists/10.json?api_token=q2BRukRoVqr8aFTDW3TpAxtDPUB5pa79
+```
+
+<a name="contact_lists_update"/>
+
+### Aktualizacja danych listy odbiorców:
+
+```shell
+curl https://YOUR_PREFIX.sugester.pl/app/contact_lists/10.json \
+     -X PUT \
+     -H 'Accept: application/json' \
+     -H 'Content-Type: application/json' \
+     -d '
+{
+"api_token": "YOUR_API_TOKEN",
+"contact_list": {
+    "name": "New contact list updated"
+  }
+}'
 ```
 
 <a name="post_error_create"/>
