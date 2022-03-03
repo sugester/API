@@ -27,6 +27,9 @@ Po zalogowaniu się do Sugester w menu Ustawienie > API znajdują się przykład
 	+ [Aktualizacja danych kontaktu](#contact_update)
 	+ [Dodanie nowej sugestii](#post_error_create)
 	+ [Dodanie konta partnerskiego](#account_create)
+	+ [Integracje](#integrations)
+		+ [Dodanie nowego klienta](#integration_new_client)
+		+ [Dodanie nowego dealu](#integration_new_deal)
 + [Klient - specyfikacja](#client)
 + [Post - specyfikacja](#post)
 
@@ -289,6 +292,61 @@ curl http://YOUR-PREFIX.sugester.pl/app/account.json \
     "email": "email1@sugester-email.pl",
     "password": "password1"
  }
+}'
+```
+
+<a name="integrations"/>
+
+## Integracje
+
+<a name="integrations_new_client"/>
+
+### Dodanie nowego klienta
+
+```shell
+curl https://YOUR_PREFIX.sugester.pl/app/clients.json \
+     -H 'Accept: application/json' \
+     -H 'Content-Type: application/json' \
+     -d '
+{
+"api_token": "YOUR_API_TOKEN",
+"client": {
+    "name": "client 2 from External APP via API",
+    "email": "c2@emailexample.net",
+    "note": "note ext 2",
+    "external_ids": {
+        "myapp_client_id": "17"
+    }
+  }
+}'
+```
+
+<a name="integrations_new_deal"/>
+
+### Dodanie nowego dealu
+
+```shell
+curl https://YOUR_PREFIX.sugester.pl/app/deals.json \
+     -H 'Accept: application/json' \
+     -H 'Content-Type: application/json' \
+     -d '
+{
+"api_token": "YOUR_API_TOKEN",
+"deal": {
+    "name": "deal 2 from External APP via API",
+    "description": "desc 2",
+    "price": 117,
+    "client": {
+        "name": "client 2 from External APP via API",
+        "email": "c2@emailexample.net",
+        "external_ids": {
+            "myapp_client_id": "17"
+        }
+    },
+    "external_ids": {
+        "myapp_invoice_id": "21"
+    }
+  }
 }'
 ```
 
