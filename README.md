@@ -28,8 +28,8 @@ Po zalogowaniu się do Sugester w menu Ustawienie > API znajdują się przykład
 	+ [Dodanie nowej sugestii](#post_error_create)
 	+ [Dodanie konta partnerskiego](#account_create)
 	+ [Integracje](#integrations)
-		+ [Dodanie nowego klienta](#integration_new_client)
-		+ [Dodanie nowego dealu](#integration_new_deal)
+		+ [Dodanie nowego klienta](#integrations_new_client)
+		+ [Dodanie nowego dealu](#integrations_new_deal)
 + [Klient - specyfikacja](#client)
 + [Post - specyfikacja](#post)
 
