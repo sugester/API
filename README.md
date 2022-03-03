@@ -22,15 +22,15 @@ Po zalogowaniu się do Sugester w menu Ustawienie > API znajdują się przykład
 
 
 <a name="token"/>
-##API token
+## API token
 
 Kod autoryzacyjny API (`API_TOKEN`) należy pobrać z ustawień aplikacji w menu: Ustawienia > API > Kod autoryzacyjny API. Dzięku niemu w wywołaniach API nie trzeba będzie podawać swojego loginu/hasła.
 
 <a name="examples"/>
-##Przykłady wywołania
+## Przykłady wywołania
 
 <a name="client_create"/>
-Dodanie nowego klienta:
+### Dodanie nowego klienta:
 
 ```shell
 curl http://YOUR-PREFIX.sugester.pl/app/clients.json\
@@ -48,13 +48,13 @@ curl http://YOUR-PREFIX.sugester.pl/app/clients.json\
 ```
 
 <a name="client_show"/>
-Pobranie danych klienta:
+### Pobranie danych klienta:
 ```shell
 curl http://YOUR-PREFIX.sugester.pl/app/clients/1234.json?api_token=YOUR_API_TOKEN
 ```
 
 <a name="client_update"/>
-Aktualizacja danych klienta:
+### Aktualizacja danych klienta:
 
 ```shell
 curl http://YOUR-PREFIX.sugester.pl/app/clients/1234.json\
@@ -71,14 +71,14 @@ curl http://YOUR-PREFIX.sugester.pl/app/clients/1234.json\
 ```
 
 <a name="client_destroy"/>
-Usunięcie klienta:
+### Usunięcie klienta:
 
 ```shell
 curl -X DELETE  http://YOUR-PREFIX.sugester.pl/app/clients/12345.json?api_token=YOUR_API_TOKEN
 ```
 
 <a name="post_task_create"/>
-Dodanie nowego zadania:
+### Dodanie nowego zadania:
 
 ```shell
 curl http://YOUR-PREFIX.sugester.pl/app/posts.json \
@@ -98,7 +98,7 @@ curl http://YOUR-PREFIX.sugester.pl/app/posts.json \
 ```
 
 <a name="deal_create"/>
-Dodanie nowego dealu:
+### Dodanie nowego dealu:
 
 ```shell
 curl http://YOUR-PREFIX.sugester.pl/app/deals.json\
@@ -116,7 +116,7 @@ curl http://YOUR-PREFIX.sugester.pl/app/deals.json\
 ```
 
 <a name="post_error_create"/>
-Dodanie posta o typie "błąd":
+### Dodanie posta o typie "błąd":
 
 ```shell
 curl http://your-prefix.sugester.pl/app/posts.json \
@@ -134,7 +134,7 @@ curl http://your-prefix.sugester.pl/app/posts.json \
 ```
 
 <a name="account_create"/>
-Dodanie nowego konta:
+### Dodanie nowego konta:
 
 ```shell
 curl http://YOUR-PREFIX.sugester.pl/app/account.json \
@@ -157,7 +157,7 @@ curl http://YOUR-PREFIX.sugester.pl/app/account.json \
 ```
 
 <a name="client"/>
-##Specyfikacja pól Klienta 
+## Specyfikacja pól Klienta 
 
 ```shell
 {
@@ -226,7 +226,7 @@ curl http://YOUR-PREFIX.sugester.pl/app/account.json \
 ```
 
 <a name="post"/>
-##Specyfikacja pól obiektu Post (Zadania/Sugestia/Zgłoszenie/E-mail)
+## Specyfikacja pól obiektu Post (Zadania/Sugestia/Zgłoszenie/E-mail)
 
 ```shell
 {
