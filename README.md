@@ -194,7 +194,7 @@ curl http://YOUR_PREFIX.sugester.pl/app/contacts.json\
 curl http://YOUR-PREFIX.sugester.pl/app/contacts/1234.json?api_token=YOUR_API_TOKEN
 ```
 
-<a name="contact_show"/>
+<a name="contact_update"/>
 
 ### Aktualizacja danych kontaktu:
 
