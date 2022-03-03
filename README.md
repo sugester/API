@@ -30,6 +30,7 @@ Kod autoryzacyjny API (`API_TOKEN`) należy pobrać z ustawień aplikacji w menu
 ## Przykłady wywołania
 
 <a name="client_create"/>
+
 ### Dodanie nowego klienta:
 
 ```shell
