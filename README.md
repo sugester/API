@@ -18,6 +18,9 @@ Po zalogowaniu się do Sugester w menu Ustawienie > API znajdują się przykład
 	+ [Aktualizacja dealu](#deal_update)
 	+ [Pobieranie danych dealu](#deal_show)
 	+ [Usunięcie dealu](#deal_destroy)
+	+ [Dodanie kontaktu](#contact_create)
+	+ [Pobranie danych kontaktu](#contact_show)
+	+ [Aktualizacja danych kontaktu](#contact_update)
 	+ [Dodanie nowej sugestii](#post_error_create)
 	+ [Dodanie konta partnerskiego](#account_create)
 + [Klient - specyfikacja](#client)
@@ -157,6 +160,57 @@ curl http://YOUR-PREFIX.sugester.pl/app/deals/1234.json?api_token=YOUR_API_TOKEN
 
 ```shell
 curl -X DELETE  http://YOUR-PREFIX.sugester.pl/app/deals/12345.json?api_token=YOUR_API_TOKEN
+```
+
+<a name="contact_create"/>
+
+### Dodanie kontaktu:
+
+```shell
+curl http://YOUR_PREFIX.sugester.pl/app/contacts.json\
+    -H 'Accept: application/json' \
+    -H 'Content-Type: application/json' \
+    -d '
+{
+"api_token": "YOUR_API_TOKEN",
+"contact": {
+   "name":"contact 1 from API",
+   "description": "new contact from API",
+   "first_name": "John",
+   "last_name": "Doe",
+   "responsible_id": 1,
+   "email": "contact@example.com",
+   "phone": "123456789"
+ }
+}'
+
+```
+
+<a name="contact_show"/>
+
+### Pobieranie danych kontaktu:
+
+```shell
+curl http://YOUR-PREFIX.sugester.pl/app/contacts/1234.json?api_token=YOUR_API_TOKEN
+```
+
+<a name="contact_show"/>
+
+### Aktualizacja danych kontaktu:
+
+```shell
+curl http://YOUR_PREFIX.sugester.pl/app/contacts/1234.json\
+    -X PUT \
+    -H 'Accept: application/json' \
+    -H 'Content-Type: application/json' \
+    -d '
+{
+"api_token": "YOUR_API_TOKEN",
+"contact": {
+   "description": "new description from API"   
+ }
+}'
+
 ```
 
 <a name="post_error_create"/>
