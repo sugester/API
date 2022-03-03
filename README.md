@@ -10,16 +10,20 @@ Po zalogowaniu się do Sugester w menu Ustawienie > API znajdują się przykład
 + [API Token](#token)  
 + Przykłady wywołania
 	+ [Dodanie klienta](#client_create)
-	+ [Pobranie danych klienta](#client_show)
+	+ [Pobieranie danych wszystkich klientów](#client_index)
+	+ [Pobieranie danych klienta](#client_show)
 	+ [Aktualizacja danych klienta](#client_update)
 	+ [Skasowanie klienta](#client_destroy)
 	+ [Dodanie zadania](#post_task_create)
+	+ [Pobieranie danych wszystkich zadań(z helpdesku)](#post_task_index)
+	+ [Pobieranie danych zadania](#post_task_show)
 	+ [Dodanie dealu](#deal_create)
 	+ [Aktualizacja dealu](#deal_update)
+	+ [Pobieranie danych wszystkich deali](#deal_index)
 	+ [Pobieranie danych dealu](#deal_show)
 	+ [Usunięcie dealu](#deal_destroy)
 	+ [Dodanie kontaktu](#contact_create)
-	+ [Pobranie danych kontaktu](#contact_show)
+	+ [Pobieranie danych kontaktu](#contact_show)
 	+ [Aktualizacja danych kontaktu](#contact_update)
 	+ [Dodanie nowej sugestii](#post_error_create)
 	+ [Dodanie konta partnerskiego](#account_create)
@@ -55,9 +59,17 @@ curl http://YOUR-PREFIX.sugester.pl/app/clients.json\
 }'
 ```
 
+<a name="client_index"/>
+
+### Pobranie danych wszystkich klientów:
+```shell
+curl http://YOUR-PREFIX.sugester.pl/app/clients.json?api_token=YOUR_API_TOKEN
+```
+
+
 <a name="client_show"/>
 
-### Pobranie danych klienta:
+### Pobranie danych jednego klienta:
 ```shell
 curl http://YOUR-PREFIX.sugester.pl/app/clients/1234.json?api_token=YOUR_API_TOKEN
 ```
@@ -109,6 +121,22 @@ curl http://YOUR-PREFIX.sugester.pl/app/posts.json \
 }'
 ```
 
+<a name="post_task_index"/>
+
+### Pobieranie danych wszystkich zadań(z helpdesku):
+
+```shell
+curl http://YOUR-PREFIX.sugester.pl/app.json?api_token=YOUR_API_TOKEN
+```
+
+<a name="post_task_show"/>
+
+### Pobieranie danych jednego zadania:
+
+```shell
+curl http://YOUR-PREFIX.sugester.pl/app/posts/1234.json?api_token=YOUR_API_TOKEN
+```
+
 <a name="deal_create"/>
 
 ### Dodanie nowego dealu:
@@ -144,6 +172,13 @@ curl http://YOUR_PREFIX.sugester.pl/app/deals/1234.json\
    "description": "new description from API"   
  }
 }'
+```
+<a name="deal_show"/>
+
+### Pobieranie danych wszystkich deali:
+
+```shell
+curl http://YOUR-PREFIX.sugester.pl/app/deals.json?api_token=YOUR_API_TOKEN
 ```
 
 <a name="deal_show"/>
