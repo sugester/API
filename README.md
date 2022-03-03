@@ -9,14 +9,14 @@ Po zalogowaniu się do Sugester w menu Ustawienie > API znajdują się przykład
 ## Spis treści
 + [API Token](#token)  
 + Przykłady wywołania
-	+ [Dodanie klienta] (#client_create)
-	+ [Pobranie danych klienta] (#client_show)
-	+ [Aktualizacja danych klienta] (#client_update)
-	+ [Skasowanie klienta] (#client_destroy)
-	+ [Dodanie zadania] (#post_task_create)
-	+ [Dodanie dealu] (#deal_create)
-	+ [Dodanie nowej sugestii] (#post_error_create)
-	+ [Dodanie konta partnerskiego] (#account_create)
+	+ [Dodanie klienta](#client_create)
+	+ [Pobranie danych klienta](#client_show)
+	+ [Aktualizacja danych klienta](#client_update)
+	+ [Skasowanie klienta](#client_destroy)
+	+ [Dodanie zadania](#post_task_create)
+	+ [Dodanie dealu](#deal_create)
+	+ [Dodanie nowej sugestii](#post_error_create)
+	+ [Dodanie konta partnerskiego](#account_create)
 + [Klient - specyfikacja](#client)
 + [Post - specyfikacja](#post)
 
