@@ -26,7 +26,7 @@ Po zalogowaniu się do Sugester w menu Ustawienie > API znajdują się przykład
 	+ [Pobieranie danych kontaktu](#contact_show)
 	+ [Aktualizacja danych kontaktu](#contact_update)
 	+ [Dodanie nowej listy odbiorców](#contact_lists_create)
-	+ [Pobranie danych listy odbiorców](#contact_lists_index)
+	+ [Pobranie danych listy odbiorców](#contact_lists_show)
 	+ [Aktualizacja danych listy odbiorców](#contact_lists_update)
 	+ [Dodanie nowej sugestii](#post_error_create)
 	+ [Dodanie konta partnerskiego](#account_create)
@@ -278,7 +278,7 @@ curl https://YOUR_PREFIX.sugester.pl/app/contact_lists.json \
 ### Pobieranie danych listy odbiorców:
 
 ```shell
-curl https://jarorafo.sugester.pl/app/contact_lists/10.json?api_token=q2BRukRoVqr8aFTDW3TpAxtDPUB5pa79
+curl https://YOUR_PREFIX.sugester.pl/app/contact_lists/10.json?api_token=q2BRukRoVqr8aFTDW3TpAxtDPUB5pa79
 ```
 
 <a name="contact_lists_update"/>
