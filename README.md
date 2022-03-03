@@ -173,7 +173,7 @@ curl http://YOUR_PREFIX.sugester.pl/app/deals/1234.json\
  }
 }'
 ```
-<a name="deal_show"/>
+<a name="deal_index"/>
 
 ### Pobieranie danych wszystkich deali:
 
