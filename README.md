@@ -278,7 +278,7 @@ curl https://YOUR_PREFIX.sugester.pl/app/contact_lists.json \
 ### Pobieranie danych listy odbiorców:
 
 ```shell
-curl https://YOUR_PREFIX.sugester.pl/app/contact_lists/10.json?api_token=q2BRukRoVqr8aFTDW3TpAxtDPUB5pa79
+curl https://YOUR_PREFIX.sugester.pl/app/contact_lists/10.json?api_token=YOUR_API_TOKEN
 ```
 
 <a name="contact_lists_update"/>
