@@ -9,7 +9,6 @@ Po zalogowaniu się do Sugester w menu Ustawienie > API znajdują się przykład
 ## Spis treści
 + [API Token](#token)  
 + [Przykłady wywołania](#examples)
-	+ Klienci
 	+ [Dodanie klienta](#client_create)
 	+ [Pobieranie danych wszystkich klientów](#client_index)
 	+ [Pobieranie danych klienta](#client_show)
