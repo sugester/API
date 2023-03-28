@@ -4,10 +4,10 @@ Opis jak zintegrować własną aplikację lub serwis z systemem <http://sugester
 
 Dzięki API można z innych systemów dodawać posty/sugestie/błędy itp
 
-Po zalogowaniu się do Sugester w menu Ustawienie > API znajdują się przykłady działające na danym koncie. Są one też dostępne na stronie http://api.sugester.pl/app/account/api 
+Po zalogowaniu się do Sugester w menu Ustawienie > API znajdują się przykłady działające na danym koncie. Są one też dostępne na stronie http://api.sugester.pl/app/account/api
 
 ## Spis treści
-+ [API Token](#token)  
++ [API Token](#token)
 + [Przykłady wywołania](#examples)
 	+ [Dodanie klienta](#client_create)
 	+ [Pobieranie danych wszystkich klientów](#client_index)
@@ -17,6 +17,7 @@ Po zalogowaniu się do Sugester w menu Ustawienie > API znajdują się przykład
 	+ [Dodanie zadania](#post_task_create)
 	+ [Pobieranie danych wszystkich zadań(z helpdesku)](#post_task_index)
 	+ [Pobieranie danych zadania](#post_task_show)
+  + [Dodanie komentarza do zadania](#post_task_comment)
 	+ [Dodanie dealu](#deal_create)
 	+ [Aktualizacja dealu](#deal_update)
 	+ [Pobieranie danych wszystkich deali](#deal_index)
@@ -57,11 +58,11 @@ curl http://YOUR-PREFIX.sugester.pl/app/clients.json\
      -H 'Content-Type: application/json' \
      -d '
 {
-"api_token": "YOUR_API_TOKEN", 
+"api_token": "YOUR_API_TOKEN",
 "client": {
     "name":"client 1 from API",
     "email": "client1@emailexample1.net",
-    "note": "note 1"    
+    "note": "note 1"
   }
 }'
 ```
@@ -92,9 +93,9 @@ curl http://YOUR-PREFIX.sugester.pl/app/clients/1234.json\
      -H 'Content-Type: application/json' \
      -d '
 {
-"api_token": "YOUR_API_TOKEN", 
+"api_token": "YOUR_API_TOKEN",
 "client": {
-    "note": "note from API"    
+    "note": "note from API"
   }
 }'
 ```
@@ -117,7 +118,7 @@ curl http://YOUR-PREFIX.sugester.pl/app/posts.json \
      -H 'Content-Type: application/json' \
      -d '
 {
-"api_token": "YOUR_API_TOKEN", 
+"api_token": "YOUR_API_TOKEN",
 "post": {
     "title":"task title 1 from API",
     "content": "task content 1",
@@ -144,6 +145,27 @@ curl http://YOUR-PREFIX.sugester.pl/app.json?api_token=YOUR_API_TOKEN
 curl http://YOUR-PREFIX.sugester.pl/app/posts/1234.json?api_token=YOUR_API_TOKEN
 ```
 
+<a name="post_task_comment"/>
+### Dodanie komentarza do zadania o id post_id:
+
+```shell
+curl http://YOUR-PREFIX.sugester.pl/app/posts.json \
+     -H 'Accept: application/json' \
+     -H 'Content-Type: application/json' \
+     -d '
+{
+"api_token": "YOUR_API_TOKEN",
+"post": {
+    "post_id": 123,
+    "title":"comment for task 123",
+    "content": "comment content 1",
+    "task_kind": "comment",
+    "client_id": null,
+    "responsible_id": 1234
+  }
+}'
+```
+
 <a name="deal_create"/>
 
 ### Dodanie nowego dealu:
@@ -154,7 +176,7 @@ curl http://YOUR-PREFIX.sugester.pl/app/deals.json\
      -H 'Content-Type: application/json' \
      -d '
 {
-"api_token": "YOUR_API_TOKEN", 
+"api_token": "YOUR_API_TOKEN",
 "deal": {
     "name":"deal 1 from API",
     "description": "desc 1",
@@ -165,7 +187,7 @@ curl http://YOUR-PREFIX.sugester.pl/app/deals.json\
 
 <a name="deal_update"/>
 
-### Aktualizacja dealu: 
+### Aktualizacja dealu:
 
 ```shell
 curl http://YOUR_PREFIX.sugester.pl/app/deals/1234.json\
@@ -176,7 +198,7 @@ curl http://YOUR_PREFIX.sugester.pl/app/deals/1234.json\
 {
 "api_token": "YOUR_API_TOKEN",
 "deal": {
-   "description": "new description from API"   
+   "description": "new description from API"
  }
 }'
 ```
@@ -249,7 +271,7 @@ curl http://YOUR_PREFIX.sugester.pl/app/contacts/1234.json\
 {
 "api_token": "YOUR_API_TOKEN",
 "contact": {
-   "description": "new description from API"   
+   "description": "new description from API"
  }
 }'
 
@@ -309,9 +331,9 @@ curl http://your-prefix.sugester.pl/app/posts.json \
      -H 'Content-Type: application/json' \
      -d '
 {
-"api_token": "API_TOKEN", 
+"api_token": "API_TOKEN",
 "post": {
-    "title":"post title2", 
+    "title":"post title2",
     "content": "post content 2",
     "kind": "error"
   }
@@ -328,7 +350,7 @@ curl http://YOUR-PREFIX.sugester.pl/app/account.json \
      -H 'Content-Type: application/json' \
      -d '
 {
-"api_token": "YOUR_API_TOKEN", 
+"api_token": "YOUR_API_TOKEN",
 "account": {
     "prefix":"sugester2",
     "initial_module": "crm",
@@ -399,7 +421,7 @@ curl https://YOUR_PREFIX.sugester.pl/app/deals.json \
 
 <a name="client"/>
 
-## Specyfikacja pól Klienta 
+## Specyfikacja pól Klienta
 
 ```shell
 {
@@ -415,13 +437,13 @@ curl https://YOUR_PREFIX.sugester.pl/app/deals.json \
 	"phone": telefon
 	"www": strona www
 	"fax": fax
-	"created_at": utworzenie 
+	"created_at": utworzenie
 	"updated_at": aktualizcja
 	"street_no": ulica
 	"kind": rodza ('buyer/seller')
 	"bank": nazwa banku
 	"bank_account": konto bankowe
-	"bank_account_id": 
+	"bank_account_id":
 	"shortcut": skrót nazwy klienta
 	"note": notatka
 	"last_name": nazwisko
@@ -474,7 +496,7 @@ curl https://YOUR_PREFIX.sugester.pl/app/deals.json \
 ```shell
 {
     "id": id posta
-    "title": tytuł 
+    "title": tytuł
     "content": treść
     "kind": rodzaj sugestii ('suggestion', 'error', 'question', 'praise', 'private'),
     "user_id": id usera
