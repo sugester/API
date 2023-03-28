@@ -15,6 +15,7 @@ Po zalogowaniu się do Sugester w menu Ustawienie > API znajdują się przykład
 	+ [Skasowanie klienta] (#client_destroy)
 	+ [Dodanie zadania] (#post_task_create)
 	+ [Dodanie komentarza do zadania] (#post_task_comment)
+	+ [Pobranie listy zadań] (#task_index)
 	+ [Dodanie dealu] (#deal_create)
 	+ [Dodanie nowej sugestii] (#post_error_create)
 	+ [Dodanie konta partnerskiego] (#account_create)
