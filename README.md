@@ -17,7 +17,7 @@ Po zalogowaniu się do Sugester w menu Ustawienie > API znajdują się przykład
 	+ [Dodanie zadania](#post_task_create)
 	+ [Pobieranie danych wszystkich zadań(z helpdesku)](#post_task_index)
 	+ [Pobieranie danych zadania](#post_task_show)
-  + [Dodanie komentarza do zadania](#post_task_comment)
+        + [Dodanie komentarza do zadania](#post_task_comment)
 	+ [Dodanie dealu](#deal_create)
 	+ [Aktualizacja dealu](#deal_update)
 	+ [Pobieranie danych wszystkich deali](#deal_index)
