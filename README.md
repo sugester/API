@@ -146,6 +146,7 @@ curl http://YOUR-PREFIX.sugester.pl/app/posts/1234.json?api_token=YOUR_API_TOKEN
 ```
 
 <a name="post_task_comment"/>
+
 ### Dodanie komentarza do zadania o id post_id:
 
 ```shell
